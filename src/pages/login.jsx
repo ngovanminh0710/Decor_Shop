@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLightbulb, faToggleOn} from '@fortawesome/free-solid-svg-icons'
-import useLocalStorage from 'use-local-storage'
-
 
 
 const background = {
@@ -25,7 +21,7 @@ const Login = () => {
     event.preventDefault()
     console.log("username:", username);
     console.log("password:", password);
-    if (username == "ngovanminh" && password == "123") {
+    if (username === "ngovanminh" && password === "123") {
       return window.location.href = "/shop"
     }
     setError ("Tên tài khoản của bạn hoặc Mật khẩu không đúng, vui lòng thử lại.")

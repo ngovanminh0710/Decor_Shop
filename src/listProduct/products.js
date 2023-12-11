@@ -1,4 +1,3 @@
-import CartProvider from "../context/CartContext"
 
 const product = [
 

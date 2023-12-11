@@ -1,9 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, {useState} from 'react'
 import product from '../listProduct/products'
-import { CartContext } from '../context/CartContext'
-import CartProvider from '../context/CartContext'
-import Cart from '../cart'
-
+import {CartModel} from "../context/CartModel";
 
 const Shop = () => {
   const [searchname, setSearchName] = useState("")
@@ -21,15 +18,15 @@ const Shop = () => {
     }
     return setproductList(product)
   }
-
+  const cartModel = new CartModel();
+  const onClickAddToCart = (item, qty) => {
+      item.qty = qty
+    cartModel.addItem(item)
+  }
   const ProductItem = ({ data, index }) => {
     const [numberProduct, setNumberProduct] = useState(1);
-    const { addToCart } = useContext(CartContext);
 
-    const onClickAddToCart = () => {
-      const productInCart = { ...data, numberProduct };
-      addToCart(productInCart)
-    }
+
     return (
 
       <div className="card border-0 rounded-0 shadow" style={{ width: "14rem" }} key={index}  >
@@ -53,22 +50,20 @@ const Shop = () => {
           <button onClick={() => setNumberProduct((curNumberProduct) => curNumberProduct + 1)} type="button" className="btn btn-light bg-success-subtle">+</button>
         </div>
         <div className="row align-items-center text-center g-0">
-          <div className='px-2'>
-            <button onClick={() => onClickAddToCart()} className="btn btn-dark w-100 rounded-0 text-warning">Thêm vào giỏ hàng</button>
+          <div className='px-2 d-flex '>
+            <button onClick={() => onClickAddToCart(data,numberProduct)} className="btn btn-dark w-100 rounded-0 me-2 text-warning">Thêm vào giỏ hàng</button>
+            <a href={"/checkout"} onClick={() => onClickAddToCart(data,numberProduct)} className="btn btn-dark w-100 rounded-0 text-warning">Mua Ngay</a>
           </div>
         </div>
       </div>
-
     )
   }
   return (
-    <CartProvider>
       <div >
         <div className='m-2' >
           <img src="/images/img/banner_sale.jpg" style={{ width: "100%", marginTop: "90px" }} />
         </div>
         <div className='m-3'>
-        <Cart />
         </div>
         <div className='container mb-3' style={{ marginTop: "10px" }}>
           <div className=' d-flex  justify-content-center w-100'>
@@ -85,7 +80,6 @@ const Shop = () => {
         </div>
       </div>
 
-    </CartProvider>
 
   )
 

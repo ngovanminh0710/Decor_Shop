@@ -1,6 +1,14 @@
 import React from 'react'
+import {CartModel} from "../context/CartModel";
 
 const Checkout = () => {
+
+    const cartModel = new CartModel();
+    const cartItems = cartModel.getItems()
+    console.log(cartItems)
+    const removeItem = (item) => {
+        cartModel.removeItem(item);
+    }
     return (
         <div style={{ marginTop: '100px' }}>
             <div className='py-2 bg-warning'>
@@ -88,15 +96,25 @@ const Checkout = () => {
                                         <th>Giá</th>
                                         <th>Số lượng</th>
                                         <th>Tổng tiền</th>
+                                        <th>Xóa</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                    <td>22323</td>
-                                    <td>22323</td>
-                                    <td>2323</td>
-                                    <td>2323</td>
-                                    </tr>
+                                {/*{*/}
+                                {/*    cartItems.map((item, index) => (*/}
+                                {/*        <tr key={index}>*/}
+                                {/*            <td>{item.title}</td>*/}
+                                {/*            <td>{item.price}</td>*/}
+                                {/*            <td>{item.qty}</td>*/}
+                                {/*            <td>{item.price * item.qty}</td>*/}
+                                {/*            <td>*/}
+                                {/*                <button type='button' className='btn btn-danger'*/}
+                                {/*                        onClick={removeItem(item)}>Xóa*/}
+                                {/*                </button>*/}
+                                {/*            </td>*/}
+                                {/*        </tr>*/}
+                                {/*    ))*/}
+                                {/*}*/}
                                 </tbody>
                             </table>
 
