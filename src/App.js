@@ -9,6 +9,7 @@ import Register from './pages/register';
 import Contact from './pages/contact';
 import About from './pages/about';
 import Checkout from './pages/checkOut';
+import Account from "./pages/Account";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/contact" element={< Contact />} />
         <Route path='/about' element={< About />} />
-       <Route path ='/checkout' element ={< Checkout />} />
+          <Route path='/checkout' element={< Checkout/>}/>
+          <Route path='/account' element={< Account/>}/>
       </Routes>
       <Footer />
     </div>

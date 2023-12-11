@@ -1,8 +1,11 @@
 import React from 'react'
 
 const Header = () => {
+  const [account, setAccount] = React.useState(JSON.parse(localStorage.getItem('account')) || {})
+
   return (
     <nav className=" navbar navbar-expand-lg bg-body-tertiary fixed-top flex-nowrap">
+      
       <div className="container-fluid  ">
         <img src="/images/img/mbeedecor_logo2_transparent.png" className="rounded float-left img_header" alt="..." />
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +37,11 @@ const Header = () => {
           </ul>
           <ul className="social-icon ms-4 mx-5">
             <li><a href="/checkout"><i className="fa fa-shopping-cart border border-black " aria-hidden="true"></i></a></li>
-            <li><a href="/login"><i className="fa fa-user-o border border-black" aria-hidden="true"></i></a></li>
+            <li><a href=
+                       {
+                         account.username ? '/account' : '/login'
+                       }
+            ><i className="fa fa-user-o border border-black" aria-hidden="true"></i></a></li>
           </ul>
         </div>
       </div>

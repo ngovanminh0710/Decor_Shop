@@ -18,7 +18,7 @@ const Home = () => {
           {(data.price - (data.price * (data.discount / 100))).toFixed(0)}₫
         </div>
         <div className="col-8">
-          <a href="/shop" className="btn btn-dark w-100 rounded-0 text-warning">Mua Ngay</a>
+          <a href="/checkout" className="btn btn-dark w-100 rounded-0 text-warning">Mua Ngay</a>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Giấy dán tường</h5>
                     <p className="card-text">Giấy dán tường siêu xinh, siêu xịn, giá cực rẻ các bạn có thể tham khảo thêm nhiều mẫu...</p>
-                    <a href="/shop" className="btn btn-primary">Xem thêm...</a>
+                    <a href="/src/pages/shop" className="btn btn-primary">Xem thêm...</a>
                   </div>
                 </div>
               </div>
@@ -90,7 +90,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Đồ Gốm Trưng Bày</h5>
                     <p className="card-text">Một số sản phẩm đồ gốm với hoa văn thiết kế độc đáo để trưng bày cực xịn...</p>
-                    <a href="/shop" className="btn btn-primary">Xem thêm...</a>
+                    <a href="/src/pages/shop" className="btn btn-primary">Xem thêm...</a>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Đèn Trang Trí</h5>
                     <p className="card-text">Tổng hợp các loại đèn trang trí phòng độc đáo, cực đẹp mời các bạn xem thêm sản phẩm...</p>
-                    <a href="/shop" className="btn btn-primary">Xem Thêm...</a>
+                    <a href="/src/pages/shop" className="btn btn-primary">Xem Thêm...</a>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Gương</h5>
                     <p className="card-text">Một số mẫu gương với thiết kế độc đáo, phù hợp để làm đẹp cho căn phòng của bạn...</p>
-                    <a href="/shop" className="btn btn-primary">Xem Thêm...</a>
+                    <a href="/src/pages/shop" className="btn btn-primary">Xem Thêm...</a>
                   </div>
                 </div>
               </div>
@@ -120,7 +120,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Kệ - Tủ Đồ</h5>
                     <p className="card-text">Một số mẫu kệ tủ đồ trang trí xinh xắn, đủ các thể loại từ cổ điển đến hiện đại...</p>
-                    <a href="/shop" className="btn btn-primary">Xem Thêm...</a>
+                    <a href="/src/pages/shop" className="btn btn-primary">Xem Thêm...</a>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Sản Phẩm Khác</h5>
                     <p className="card-text">Bao gồm các sản phẩm chi tiết nhỏ trang trí phòng mà chúng ta không thể bỏ qua</p>
-                    <a href="/shop" className="btn btn-primary">Xem Thêm...</a>
+                    <a href="/src/pages/shop" className="btn btn-primary">Xem Thêm...</a>
                   </div>
                 </div>
               </div>
